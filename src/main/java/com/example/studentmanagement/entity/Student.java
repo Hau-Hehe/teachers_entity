@@ -26,4 +26,8 @@ public class Student {
 
     @Column(name = "age", nullable = false)
     private Integer age;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "teacher_id")
+    private Teacher advisorTeacher;
 }
